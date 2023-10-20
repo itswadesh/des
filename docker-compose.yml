@@ -1,6 +1,6 @@
 version: '3.9'
 services:
-  Elasticsearch:
+  elasticsearch:
     build:
       dockerfile: Dockerfile
     ports:
@@ -8,7 +8,7 @@ services:
     networks:
       - elk
 
-  Logstash:
+  logstash:
     image: logstash:7.16.2
     container_name: logstash
     restart: always
@@ -24,7 +24,7 @@ services:
     networks:
       - elk
 
-  Kibana:
+  kibana:
     image: kibana:7.16.2
     container_name: kibana
     restart: always
